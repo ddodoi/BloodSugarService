@@ -8,6 +8,10 @@ const{
 
 router.use(express.json());
 
+router.get('/', (req, res) => {
+    res.send('Welcome to the Users API');
+  });
+
 //회원가입
 router.post('/register', register);
 
