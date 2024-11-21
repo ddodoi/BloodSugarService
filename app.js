@@ -3,6 +3,7 @@ const app = express();
 
 app.use(express.json());
 
+// 라우터 추가
 const userRouter = require('./routes/users');
 const bloodsugarRouter = require('./routes/bloodsugar');
 // const a1cRouter = require('./routes/a1c');
@@ -15,6 +16,9 @@ app.use('/bloodsugar', bloodsugarRouter);
 // app.use('/meals', mealsRouter);
 // app.use('/exercise', exerciseRouter);
 
-// Vercel에서는 app.listen이 필요하지 않습니다.
-// 대신, Express 앱을 내보냅니다.
+// 루트 경로 처리
+app.get('/', (req, res) => {
+  res.send('Welcome to the API');
+});
+
 module.exports = app;
