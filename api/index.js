@@ -1,2 +1,2 @@
-const app = require('../app'); // app.js를 불러옵니다.
+const app = require('../app'); // app.js를 가져옴
 module.exports = app;
